@@ -5,6 +5,9 @@ export const ROUTES = {
   HOME_SCREEN: {
     name: "HOME_SCREEN",
   },
+  LOGIN_SCREEN: {
+    name: "LOGIN_SCREEN",
+  },
 };
 
 export type TRoute = {

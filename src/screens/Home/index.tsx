@@ -15,7 +15,7 @@ interface HomeScreenProps {}
 
 const HomeScreen = (props: HomeScreenProps) => {
   const {} = props || {};
-  const {isHeartFocus, onFocusHeart} = useHome();
+  const {isHeartFocus, onFocusHeart, onNavigatorLogin} = useHome();
   const insets = useSafeAreaInsets();
   const renderCategory = () => {
     return (
@@ -36,7 +36,7 @@ const HomeScreen = (props: HomeScreenProps) => {
   const renderSearch = () => {
     return (
       <View style={{width: '100%', paddingVertical: ScalePortrait(10), paddingHorizontal: ScalePortrait(4)}}>
-        <ButtonAnimation>
+        <ButtonAnimation onPress={onNavigatorLogin}>
         <View style={{flexDirection:'row',borderWidth: 1, borderColor: Colors.grey_02, borderRadius: ScalePortrait(60),
         alignItems:'center', paddingHorizontal: ScalePortrait(16), justifyContent:'space-between'}}>
         <Text style={{paddingVertical: ScalePortrait(10), fontFamily: Fonts.Manrope_Regular, fontSize: ScaleFontPortrait(14), color: Colors.brown_01}}>Bạn muốn tìm kiếm sản phẩm nào?</Text>

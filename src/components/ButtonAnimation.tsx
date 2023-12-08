@@ -1,7 +1,7 @@
 import { PlatformUtils } from "@utils/PlatformUtils";
 import React, { useState } from "react";
 import { Pressable, StyleProp, View, Image, ImageStyle } from "react-native";
-import Animated, { useSharedValue, useAnimatedStyle, withSpring } from "react-native-reanimated";
+import Animated, { useSharedValue, useAnimatedStyle, withSpring, runOnJS } from "react-native-reanimated";
 
 interface buttonProps {
   children?: React.ReactNode;
@@ -36,7 +36,7 @@ const ButtonAnimation = (props: buttonProps) => {
 
   const handleButtonPressOut = () => {
     setIsPressing(false);
-    scale.value = withSpring(1, { stiffness: 2000 });
+    scale.value = withSpring(1, { stiffness: 2000 }, () => runOnJS(onEvent)());
   };
 
   const animatedStyle = useAnimatedStyle(() => {
@@ -47,7 +47,7 @@ const ButtonAnimation = (props: buttonProps) => {
 
   return (
     <View>
-      <Pressable disabled={disable || disabled} onPress={onEvent} onPressIn={handleButtonPressIn} onPressOut={handleButtonPressOut}>
+      <Pressable disabled={disable || disabled} onPressIn={handleButtonPressIn} onPressOut={handleButtonPressOut}>
         <Animated.View style={[animatedStyle]}>
           {imageButton ? <Image resizeMode='contain' style={stylesImage} source={{ uri: imageButton }} /> : children}
         </Animated.View>
