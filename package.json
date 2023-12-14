@@ -12,9 +12,13 @@
     "xc": "cd ios && open atHome.xcworkspace && cd .."
   },
   "dependencies": {
+    "@react-native-community/clipboard": "^1.5.1",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
+    "@twotalltotems/react-native-otp-input": "^1.3.11",
+    "add": "^2.0.6",
     "lottie-react-native": "^6.4.1",
+    "or": "^0.2.0",
     "react": "18.2.0",
     "react-native": "0.72.7",
     "react-native-fast-image": "^8.6.3",
@@ -25,7 +29,8 @@
     "react-native-sound": "^0.11.2",
     "react-redux": "^9.0.2",
     "react-redux-i18n": "^1.9.3",
-    "redux": "^5.0.0"
+    "redux": "^5.0.0",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

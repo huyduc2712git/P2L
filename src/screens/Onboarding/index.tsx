@@ -14,8 +14,6 @@ const OnboardingScreen = () => {
   const onViewableItemsChanged = ({ viewableItems }: { viewableItems: ViewToken[] }) => {
     if (viewableItems.length > 0 && viewableItems[0].index !== null) {
       const newIndex = viewableItems[0].index;
-
-      // Ensure that the index has changed before updating the shared value
       if (newIndex !== flatListIndex.value) {
         flatListIndex.value = newIndex;
       }

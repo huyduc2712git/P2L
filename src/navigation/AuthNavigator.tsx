@@ -24,7 +24,7 @@ function AuthNavigator() {
       ref={(ref: any) => AppNavigator.setRootNavigator(ref)}
       onStateChange={AppNavigator.onTrackScreenChange}
       onReady={AppNavigator.onTrackScreenChange}>
-      <Stack.Navigator initialRouteName={ROUTES.ONBOARDING_SCREEN.name} screenOptions={{ gestureEnabled: false }}>
+      <Stack.Navigator initialRouteName={ROUTES.LOGIN_SCREEN.name} screenOptions={{ gestureEnabled: false }}>
         {Object.values(ROUTES).map((route: TRoute, index: number) => {
           const { name, options = {} } = route;
           return (

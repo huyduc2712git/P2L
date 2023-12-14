@@ -39,7 +39,7 @@ const HomeScreen = (props: HomeScreenProps) => {
         <ButtonAnimation onPress={onNavigatorLogin}>
         <View style={{flexDirection:'row',borderWidth: 1, borderColor: Colors.grey_02, borderRadius: ScalePortrait(60),
         alignItems:'center', paddingHorizontal: ScalePortrait(16), justifyContent:'space-between'}}>
-        <Text style={{paddingVertical: ScalePortrait(10), fontFamily: Fonts.Manrope_Regular, fontSize: ScaleFontPortrait(14), color: Colors.brown_01}}>Bạn muốn tìm kiếm sản phẩm nào?</Text>
+        <Text style={{paddingVertical: ScalePortrait(10), fontFamily: Fonts.Manrope_Regular, fontSize: ScaleFontPortrait(14), color: Colors.brown_01}}>{I18n.t('homeQuestionSearch')}</Text>
         <FastImage resizeMode="contain" source={Images.ic_search} style={{width: ScalePortrait(20), aspectRatio: 1, }}/>
         </View>
         </ButtonAnimation>
