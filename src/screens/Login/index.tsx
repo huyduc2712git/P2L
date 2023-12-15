@@ -31,29 +31,29 @@ const Login = (props: ILoginProps) => {
 
           </View> */}
         {/* </ButtonAnimation> */}
-      <OTPInputView
-        style={{width: '100%', height: 200, borderWidth: 1}}
-        pinCount={6}
-        code={otp}
-        onCodeChanged={handleOtpChange}
-        autoFocusOnLoad
-        codeInputFieldStyle={{
-          width: ScalePortrait(40),
-          height: ScalePortrait(40),
-          // borderWidth: 1,
-          fontFamily: Fonts.Manrope_Bold,
-          fontSize: ScaleFontPortrait(20),
-          backgroundColor: Colors.while,
-          borderRadius: ScalePortrait(8),
-          color: Colors.black,
-          borderColor: Colors.grey_02,
-          margin: ScalePortrait(6)
-        }}
-        codeInputHighlightStyle={{borderColor: '#5865F2'}}
-        onCodeFilled = {(code) => {
-          console.log(`Code is ${code}, you are good to go!`)
-        }}
-      />
+        <OTPInputView
+          style={{width: '100%', height: 200, borderWidth: 1}}
+          pinCount={6}
+          code={otp}
+          onCodeChanged={handleOtpChange}
+          autoFocusOnLoad
+          codeInputFieldStyle={{
+            width: ScalePortrait(40),
+            height: ScalePortrait(40),
+            // borderWidth: 1,
+            fontFamily: Fonts.Manrope_Bold,
+            fontSize: ScaleFontPortrait(20),
+            backgroundColor: Colors.while,
+            borderRadius: ScalePortrait(8),
+            color: Colors.black,
+            borderColor: Colors.grey_02,
+            margin: ScalePortrait(6)
+          }}
+          codeInputHighlightStyle={{borderColor: '#5865F2'}}
+          onCodeFilled = {(code) => {
+            console.log(`Code is ${code}, you are good to go!`)
+          }}
+        />
       </View>
       </>
     )
