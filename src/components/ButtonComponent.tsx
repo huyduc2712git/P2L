@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
     fontSize: ScaleFontPortrait(16),
     fontFamily: Fonts.TikTokText_Medium,
     lineHeight: ScaleFontPortrait(18),
-    color: Colors.while,
+    color: Colors.white,
   },
 });

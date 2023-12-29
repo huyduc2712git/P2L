@@ -1,7 +1,7 @@
 export default {
   black: "#000000",
   black_01: "#262626",
-  while: "#ffffff",
+  white: "#ffffff",
   blue_01: "#0F294D",
   blue_02: "#3F80FF",
   blue_03: "#0F172A",
@@ -22,4 +22,13 @@ export default {
   red_04: "#6B1D1D",
   red_05: "#DA5A68",
   red_06: "#EF4444",
+  opacity_black_15: "rgba(0, 0, 0, 0.15)",
+  opacity_black_20: "rgba(0, 0, 0, 0.2)",
+  opacity_black_25: "rgba(0, 0, 0, 0.25)",
+  opacity_black_30: "rgba(0, 0, 0, 0.3)",
+  opacity_black_40: "rgba(0, 0, 0, 0.4)",
+  opacity_black_50: "rgba(0, 0, 0, 0.5)",
+  opacity_black_60: "rgba(0, 0, 0, 0.6)",
+  opacity_black_90: "rgba(0, 0, 0, 0.9)",
+  opacity_black_22: "rgba(0,0,0,0.22)",
 };

@@ -1,12 +1,13 @@
 import AppNavigator from "@navigation/AppNavigator";
 import { ROUTES } from "@navigation/routes";
+import BusinessPopup from "@screens/Dialog/Components/BusinessPopup";
 import { useMemo, useState } from "react";
 
 const useRegister = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [valueSelect, setValueSelectet] = useState("");
 
-  const onPressBack = () => {
+  const handleGoBack = () => {
     AppNavigator.goBack();
   };
 
@@ -26,9 +27,11 @@ const useRegister = () => {
     }
   };
 
-  const onGoLogin = () => {
-    setValueSelectet("Trải nghiệm văn hoá");
-    // AppNavigator.navigate(ROUTES.LOGIN_SCREEN.name);
+  const onShowPopupBusiness = () => {
+    // setValueSelectet("Trải nghiệm văn hoá");
+    AppNavigator.showDialog({
+      screen: BusinessPopup,
+    });
   };
 
   const onNextPart = () => {
@@ -38,8 +41,8 @@ const useRegister = () => {
     onHandleChageText,
     errorMessage,
     setErrorMessage,
-    onGoLogin,
-    onPressBack,
+    onShowPopupBusiness,
+    handleGoBack,
     onHandleOnBlur,
     valueSelect,
     onNextPart,

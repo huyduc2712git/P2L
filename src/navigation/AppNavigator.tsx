@@ -1,7 +1,27 @@
+import React, { ReactElement, ReactNode } from "react";
 import { Keyboard } from "react-native";
+
+interface IShowDialog {
+  screen?: React.FC;
+}
 
 let navigator: any;
 let debounce: any;
+let dialogInstanceRef: any;
+
+function showDialog(params: IShowDialog) {
+  console.log("showDialog", params);
+  Keyboard.dismiss();
+  dialogInstanceRef?.showDialog(params);
+}
+
+function dismissAllPopup() {
+  dialogInstanceRef?.closeDialog?.();
+}
+
+function setRefDialog(ref: object) {
+  dialogInstanceRef = ref;
+}
 
 const setRootNavigator = (navigationRef = {}) => {
   if (!navigator || navigationRef) {
@@ -9,7 +29,11 @@ const setRootNavigator = (navigationRef = {}) => {
   }
 };
 
-function navigate(name: string, params = {}, key = `${name}_${new Date().getTime()}`) {
+function navigate(
+  name: string,
+  params = {},
+  key = `${name}_${new Date().getTime()}`
+) {
   Keyboard.dismiss();
   if (navigator) {
     if (debounce) {
@@ -61,4 +85,7 @@ export default {
   setRootNavigator,
   onTrackScreenChange,
   goBack,
+  showDialog,
+  setRefDialog,
+  dismissAllPopup,
 };

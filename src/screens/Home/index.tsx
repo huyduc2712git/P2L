@@ -98,7 +98,7 @@ const HomeScreen = (props: HomeScreenProps) => {
               <FastImage source={Images.bg_shoes} style={styles.image}>
                 <View
                   style={{
-                    backgroundColor: Colors.while,
+                    backgroundColor: Colors.white,
                     padding: ScalePortrait(8),
                     position: "absolute",
                     borderRadius: ScalePortrait(20),
@@ -199,5 +199,5 @@ const styles = StyleSheet.create({
     width: ScalePortrait(40),
     aspectRatio: 1,
   },
-  titleCategory: { fontFamily: Fonts.Manrope_Medium, color: Colors.while },
+  titleCategory: { fontFamily: Fonts.Manrope_Medium, color: Colors.white },
 });

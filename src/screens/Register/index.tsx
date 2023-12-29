@@ -16,7 +16,6 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from "react-native";
-import FastImage from "react-native-fast-image";
 import { I18n } from "react-redux-i18n";
 
 interface IRegisterProps {}
@@ -29,24 +28,21 @@ const Register = (props: IRegisterProps) => {
     setErrorMessage,
     onHandleOnBlur,
     valueSelect,
-    onGoLogin,
+    onShowPopupBusiness,
     onNextPart,
+    handleGoBack,
   } = useRegister();
   const insets = InsetStyleUtil();
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={[styles.container, insets]}>
-        <ButtonAnimation
-          imageButton={Images.ic_directional}
-          stylesImage={{ width: ScalePortrait(24), aspectRatio: 1 }}
-        />
-        {/* <View style={styles.markIconBack}>
-          <FastImage
-            resizeMode="contain"
+        <View style={styles.markIconBack}>
+          <ButtonAnimation
+            onPress={handleGoBack}
             source={Images.ic_directional}
             style={styles.iconBack}
           />
-        </View> */}
+        </View>
         <Text style={styles.counter}>{"1 / 4"}</Text>
         <Text style={styles.titleRegister}>{I18n.t("titleRegister")}</Text>
         <Text style={styles.descRegister}>{I18n.t("descRegister")}</Text>
@@ -71,7 +67,7 @@ const Register = (props: IRegisterProps) => {
           type={"SELECT"}
           editable={false}
           value={valueSelect}
-          onPress={onGoLogin}
+          onPress={onShowPopupBusiness}
           onChangeText={onHandleChageText}
           style={styles.marginTopInput}
           labelSelect={INPUT_BUSINESS.label}
@@ -94,7 +90,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: ScalePortrait(20),
-    backgroundColor: Colors.while,
+    backgroundColor: Colors.white,
   },
   buttonComponent: {
     flex: 1,

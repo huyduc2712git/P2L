@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: ScalePortrait(16),
-    backgroundColor: Colors.while,
+    backgroundColor: Colors.white,
     width: "100%",
   },
   containerOTPInput: {
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     height: ScalePortrait(44),
     fontFamily: Fonts.Manrope_Bold,
     fontSize: ScaleFontPortrait(20),
-    backgroundColor: Colors.while,
+    backgroundColor: Colors.white,
     borderRadius: ScalePortrait(8),
     color: Colors.black,
     borderColor: Colors.grey_02,
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   titleButton: {
-    color: Colors.while,
+    color: Colors.white,
     fontSize: ScaleFontPortrait(14),
     fontFamily: Fonts.Manrope_SemiBold,
   },

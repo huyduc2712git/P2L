@@ -1,6 +1,15 @@
 import { PlatformUtils } from "@utils/PlatformUtils";
 import React, { memo, useState } from "react";
-import { Pressable, StyleProp, View, Image, ImageStyle } from "react-native";
+import {
+  Pressable,
+  StyleProp,
+  View,
+  ImageStyle as RNImageStyle,
+} from "react-native";
+import FastImage, {
+  ImageStyle as FastImageStyle,
+  Source,
+} from "react-native-fast-image";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -8,17 +17,18 @@ import Animated, {
   runOnJS,
 } from "react-native-reanimated";
 
+type CustomImageStyle = RNImageStyle & FastImageStyle;
 interface IButtonProps {
   children?: React.ReactNode;
-  stylesImage?: StyleProp<ImageStyle>;
-  imageButton?: string;
+  style?: StyleProp<CustomImageStyle>;
+  source?: Source;
   onPress?: () => void;
   disabled?: boolean;
 }
 const { isAndroid } = PlatformUtils;
 
 const ButtonAnimation = (props: IButtonProps) => {
-  const { stylesImage, imageButton, onPress, children, disabled } = props;
+  const { style, source, onPress, children, disabled } = props;
   const [isPressing, setIsPressing] = useState(false);
   const [disable, setDisable] = useState(false);
 
@@ -58,12 +68,8 @@ const ButtonAnimation = (props: IButtonProps) => {
         onPressOut={handleButtonPressOut}
       >
         <Animated.View style={[animatedStyle]}>
-          {imageButton ? (
-            <Image
-              resizeMode="contain"
-              style={stylesImage}
-              source={{ uri: imageButton }}
-            />
+          {source ? (
+            <FastImage resizeMode="contain" style={style} source={source} />
           ) : (
             children
           )}
