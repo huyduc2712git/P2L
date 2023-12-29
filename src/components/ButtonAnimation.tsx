@@ -1,18 +1,23 @@
 import { PlatformUtils } from "@utils/PlatformUtils";
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { Pressable, StyleProp, View, Image, ImageStyle } from "react-native";
-import Animated, { useSharedValue, useAnimatedStyle, withSpring, runOnJS } from "react-native-reanimated";
+import Animated, {
+  useSharedValue,
+  useAnimatedStyle,
+  withSpring,
+  runOnJS,
+} from "react-native-reanimated";
 
-interface buttonProps {
+interface IButtonProps {
   children?: React.ReactNode;
   stylesImage?: StyleProp<ImageStyle>;
   imageButton?: string;
   onPress?: () => void;
-  disabled?: boolean
+  disabled?: boolean;
 }
 const { isAndroid } = PlatformUtils;
 
-const ButtonAnimation = (props: buttonProps) => {
+const ButtonAnimation = (props: IButtonProps) => {
   const { stylesImage, imageButton, onPress, children, disabled } = props;
   const [isPressing, setIsPressing] = useState(false);
   const [disable, setDisable] = useState(false);
@@ -47,13 +52,25 @@ const ButtonAnimation = (props: buttonProps) => {
 
   return (
     <View>
-      <Pressable disabled={disable || disabled} onPressIn={handleButtonPressIn} onPressOut={handleButtonPressOut}>
+      <Pressable
+        disabled={disable || disabled}
+        onPressIn={handleButtonPressIn}
+        onPressOut={handleButtonPressOut}
+      >
         <Animated.View style={[animatedStyle]}>
-          {imageButton ? <Image resizeMode='contain' style={stylesImage} source={{ uri: imageButton }} /> : children}
+          {imageButton ? (
+            <Image
+              resizeMode="contain"
+              style={stylesImage}
+              source={{ uri: imageButton }}
+            />
+          ) : (
+            children
+          )}
         </Animated.View>
       </Pressable>
     </View>
   );
 };
 
-export default ButtonAnimation;
+export default memo(ButtonAnimation);

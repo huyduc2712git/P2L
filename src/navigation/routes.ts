@@ -8,6 +8,12 @@ export const ROUTES = {
   LOGIN_SCREEN: {
     name: "LOGIN_SCREEN",
   },
+  VERIFY_OTP_SCREEN: {
+    name: "VERIFY_OTP_SCREEN",
+  },
+  REGISTER_SCREEN: {
+    name: "REGISTER_SCREEN",
+  },
 };
 
 export type TRoute = {

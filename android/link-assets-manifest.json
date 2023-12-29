@@ -30,8 +30,32 @@
       "sha1": "e423e112f4832916b05308934c10aa84fd14c607"
     },
     {
+      "path": "src/assets/fonts/TikTokDisplay-Bold.otf",
+      "sha1": "905d1d78386174711a8b646bf7d6d040e01f2581"
+    },
+    {
+      "path": "src/assets/fonts/TikTokDisplay-Medium.otf",
+      "sha1": "71fd5f2ecd6512771878335d44ec30290b619016"
+    },
+    {
+      "path": "src/assets/fonts/TikTokDisplay-Regular.otf",
+      "sha1": "7b7c13aaa6c302e4925427c38dbcd5438479f438"
+    },
+    {
+      "path": "src/assets/fonts/TikTokText-Bold.otf",
+      "sha1": "52161bc36244fa87b87421313a422ea1dc62f0b6"
+    },
+    {
+      "path": "src/assets/fonts/TikTokText-Medium.otf",
+      "sha1": "6d8028342e3d65f18b3a9298875f78ee5c6b042e"
+    },
+    {
+      "path": "src/assets/fonts/TikTokText-Regular.otf",
+      "sha1": "b7b39ae93dd5b952a47cb424562116cb5a78de6a"
+    },
+    {
       "path": "src/assets/fonts/index.ts",
-      "sha1": "8858317e3bf7b773261aeafb450c7950763e47e0"
+      "sha1": "6283692c5987afa4e594cc7edcf37223607cb2a5"
     }
   ]
 }

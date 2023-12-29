@@ -4,27 +4,36 @@ import ButtonAnimation from "@components/ButtonAnimation";
 import Colors from "@constants/Colors";
 import dataCategory, { ICategoryData } from "@data/dataCategory";
 import useHome from "@hooks/useHome";
+import InsetStyleUtil from "@utils/InsetStyleUtil";
 import { ScalePortrait, ScaleFontPortrait } from "@utils/ScalePortraitUtil";
 import React from "react";
 import { Text, View, StyleSheet, ScrollView } from "react-native";
 import FastImage from "react-native-fast-image";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { I18n } from "react-redux-i18n";
 
 interface HomeScreenProps {}
 
 const HomeScreen = (props: HomeScreenProps) => {
   const {} = props || {};
-  const {isHeartFocus, onFocusHeart, onNavigatorLogin} = useHome();
-  const insets = useSafeAreaInsets();
+  const { isHeartFocus, onFocusHeart, onGoLogin, onPressBack } = useHome();
+  const insets = InsetStyleUtil();
   const renderCategory = () => {
     return (
       <View style={styles.containerCategory}>
         {dataCategory.map((item: ICategoryData, index: number) => {
           return (
-            <ButtonAnimation>
-              <View style={[styles.contentCategory, { backgroundColor: item.backgroundColor }]}>
-                <FastImage resizeMode='contain' source={{ uri: item.imageCategory }} style={styles.imageCategory} />
+            <ButtonAnimation onPress={onPressBack}>
+              <View
+                style={[
+                  styles.contentCategory,
+                  { backgroundColor: item.backgroundColor },
+                ]}
+              >
+                <FastImage
+                  resizeMode="contain"
+                  source={{ uri: item.imageCategory }}
+                  style={styles.imageCategory}
+                />
                 <Text style={styles.titleCategory}>{item.text}</Text>
               </View>
             </ButtonAnimation>
@@ -35,33 +44,78 @@ const HomeScreen = (props: HomeScreenProps) => {
   };
   const renderSearch = () => {
     return (
-      <View style={{width: '100%', paddingVertical: ScalePortrait(10), paddingHorizontal: ScalePortrait(4)}}>
-        <ButtonAnimation onPress={onNavigatorLogin}>
-        <View style={{flexDirection:'row',borderWidth: 1, borderColor: Colors.grey_02, borderRadius: ScalePortrait(60),
-        alignItems:'center', paddingHorizontal: ScalePortrait(16), justifyContent:'space-between'}}>
-        <Text style={{paddingVertical: ScalePortrait(10), fontFamily: Fonts.Manrope_Regular, fontSize: ScaleFontPortrait(14), color: Colors.brown_01}}>{I18n.t('homeQuestionSearch')}</Text>
-        <FastImage resizeMode="contain" source={Images.ic_search} style={{width: ScalePortrait(20), aspectRatio: 1, }}/>
-        </View>
+      <View
+        style={{
+          width: "100%",
+          paddingVertical: ScalePortrait(10),
+          paddingHorizontal: ScalePortrait(4),
+        }}
+      >
+        <ButtonAnimation onPress={onGoLogin}>
+          <View
+            style={{
+              flexDirection: "row",
+              borderWidth: 1,
+              borderColor: Colors.grey_02,
+              borderRadius: ScalePortrait(60),
+              alignItems: "center",
+              paddingHorizontal: ScalePortrait(16),
+              justifyContent: "space-between",
+            }}
+          >
+            <Text
+              style={{
+                paddingVertical: ScalePortrait(10),
+                fontFamily: Fonts.Manrope_Regular,
+                fontSize: ScaleFontPortrait(14),
+                color: Colors.brown_01,
+              }}
+            >
+              {I18n.t("homeQuestionSearch")}
+            </Text>
+            <FastImage
+              resizeMode="contain"
+              source={Images.ic_search}
+              style={{ width: ScalePortrait(20), aspectRatio: 1 }}
+            />
+          </View>
         </ButtonAnimation>
       </View>
-    )
-  }
+    );
+  };
   return (
-    <View style={[styles.container, { paddingTop: insets.top, paddingBottom: insets.bottom }]}>
+    <View style={[styles.container, insets]}>
       {renderSearch()}
       {renderCategory()}
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.containerScrollView}
-        style={styles.scrollView}>
+        style={styles.scrollView}
+      >
         {[1, 2, 3, 4, 5].map(() => {
           return (
             <View style={styles.imageContainer}>
               <FastImage source={Images.bg_shoes} style={styles.image}>
-                <View style={{ backgroundColor: Colors.while, padding: ScalePortrait(8), position:'absolute', borderRadius: ScalePortrait(20), alignItems:'center', justifyContent:'center', bottom: ScalePortrait(10), right: ScalePortrait(10)}}>
-                <ButtonAnimation onPress={onFocusHeart}>
-                  <FastImage source={isHeartFocus ? Images.ic_heart_focus : Images.ic_heart} style={{width: ScalePortrait(20), aspectRatio: 1 }}/>
-                </ButtonAnimation>
+                <View
+                  style={{
+                    backgroundColor: Colors.while,
+                    padding: ScalePortrait(8),
+                    position: "absolute",
+                    borderRadius: ScalePortrait(20),
+                    alignItems: "center",
+                    justifyContent: "center",
+                    bottom: ScalePortrait(10),
+                    right: ScalePortrait(10),
+                  }}
+                >
+                  <ButtonAnimation onPress={onFocusHeart}>
+                    <FastImage
+                      source={
+                        isHeartFocus ? Images.ic_heart_focus : Images.ic_heart
+                      }
+                      style={{ width: ScalePortrait(20), aspectRatio: 1 }}
+                    />
+                  </ButtonAnimation>
                 </View>
               </FastImage>
               <View style={styles.detailsContainer}>
@@ -143,7 +197,7 @@ const styles = StyleSheet.create({
   },
   imageCategory: {
     width: ScalePortrait(40),
-    aspectRatio:1,
+    aspectRatio: 1,
   },
   titleCategory: { fontFamily: Fonts.Manrope_Medium, color: Colors.while },
 });

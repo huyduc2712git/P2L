@@ -9,13 +9,18 @@ const useHome = () => {
     setHeartFocus(!isHeartFocus)
   }
 
-  const onNavigatorLogin = () => {
+  const onPressBack = () => {
+    AppNavigator.goBack();
+  };
+
+  const onGoLogin = () => {
     AppNavigator.navigate(ROUTES.LOGIN_SCREEN.name)
   }
    return {
     isHeartFocus,
     onFocusHeart,
-    onNavigatorLogin,
+    onGoLogin,
+    onPressBack,
    };
 };
 export default useHome;

@@ -16,7 +16,8 @@ function isTablet() {
   const { height, width } = Dimensions.get("window");
   const aspectRatio = height / width;
 
-  const isTabletDevice = Platform.OS === "ios" ? aspectRatio < 1.6 : aspectRatio < 1.1;
+  const isTabletDevice =
+    Platform.OS === "ios" ? aspectRatio < 1.6 : aspectRatio < 1.1;
 
   return isTabletDevice && !isIPad();
 }

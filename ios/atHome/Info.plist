@@ -58,6 +58,12 @@
 		<string>Manrope-Medium.ttf</string>
 		<string>Manrope-Regular.ttf</string>
 		<string>Manrope-SemiBold.ttf</string>
+		<string>TikTokDisplay-Bold.otf</string>
+		<string>TikTokDisplay-Medium.otf</string>
+		<string>TikTokDisplay-Regular.otf</string>
+		<string>TikTokText-Bold.otf</string>
+		<string>TikTokText-Medium.otf</string>
+		<string>TikTokText-Regular.otf</string>
 	</array>
 </dict>
 </plist>

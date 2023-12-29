@@ -1,9 +1,15 @@
 export default {
-  Manrope_Bold: 'Manrope-Bold',
-  Manrope_ExtraBold: 'Manrope-ExtraBold',
-  Manrope_ExtraLight: 'Manrope-ExtraLight',
-  Manrope_Light: 'Manrope-Light',
-  Manrope_Medium: 'Manrope-Medium',
-  Manrope_Regular: 'Manrope-Regular',
-  Manrope_SemiBold: 'Manrope-SemiBold',
-}
+  Manrope_Bold: "Manrope-Bold",
+  Manrope_ExtraBold: "Manrope-ExtraBold",
+  Manrope_ExtraLight: "Manrope-ExtraLight",
+  Manrope_Light: "Manrope-Light",
+  Manrope_Medium: "Manrope-Medium",
+  Manrope_Regular: "Manrope-Regular",
+  Manrope_SemiBold: "Manrope-SemiBold",
+  TikTokDisplay_Bold: "TikTokDisplay-Bold",
+  TikTokDisplay_Medium: "TikTokDisplay-Medium",
+  TikTokDisplay_Regular: "TikTokDisplay-Regular",
+  TikTokText_Bold: "TikTokText-Bold",
+  TikTokText_Medium: "TikTokText-Medium",
+  TikTokText_Regular: "TikTokText-Regular",
+};

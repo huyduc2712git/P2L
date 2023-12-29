@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* atHomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* atHomeTests.m */; };
+		091604F81E3B4C6FA1415146 /* TikTokDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB120F861C2D41FD83DCEC74 /* TikTokDisplay-Medium.otf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-atHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-atHome.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		16BEBF27815849D3A922362E /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F169E0FA0FFF4CCEBD264881 /* Manrope-ExtraLight.ttf */; };
+		5922D5A8F9044FE0B60CD324 /* TikTokText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BE4608EAFC314589A8B8C78F /* TikTokText-Regular.otf */; };
 		6EF5EDD444F34790BF34C509 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D05E1B3152974411839608CA /* Manrope-Light.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-atHome-atHomeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-atHome-atHomeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		82D057A274F340699B7648AF /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ED4FAF30D574D868F3D6477 /* Manrope-Medium.ttf */; };
-		86A78A26879C405BBF257D2C /* index.ts in Resources */ = {isa = PBXBuildFile; fileRef = 811C7CC9054548C0B0C52933 /* index.ts */; };
+		8A1A0160D5A44BEBA44A0FD3 /* index.ts in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D1E502C042A5B11A59F0 /* index.ts */; };
 		8BE399E2F44549ACBC59CD1F /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 690125106C6249CC96D71FD8 /* Manrope-ExtraBold.ttf */; };
+		8C12240D20E740A49AD11770 /* TikTokDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80B2ACFCBDB74215BF88F6F0 /* TikTokDisplay-Regular.otf */; };
+		A3F874F683FA4A44A8B9A7EE /* TikTokDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D2BA37C43A6A40FDAFF1FD2B /* TikTokDisplay-Bold.otf */; };
 		DE2CA996E7E1462197079DC3 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94DDD3364A4145E6AF4C5F46 /* Manrope-Regular.ttf */; };
+		E63BFE9BD37544E1AD0B5315 /* TikTokText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3B648D42FCF424F889D7820 /* TikTokText-Medium.otf */; };
 		EBDF9F980E0D403B87C2F524 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 334A692F0FF54E4EB15D2466 /* Manrope-SemiBold.ttf */; };
 		F556CF25785444A4812FE3AD /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4C38B5C3C764EEEA2152000 /* Manrope-Bold.ttf */; };
+		FE7A8F25092D4A17B3498F42 /* TikTokText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 00CF4ACB3F2B4D96BF7B21E7 /* TikTokText-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00CF4ACB3F2B4D96BF7B21E7 /* TikTokText-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TikTokText-Bold.otf"; path = "../src/assets/fonts/TikTokText-Bold.otf"; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* atHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = atHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* atHomeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = atHomeTests.m; sourceTree = "<group>"; };
@@ -46,18 +53,23 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = atHome/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-atHome-atHomeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-atHome-atHomeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		334A692F0FF54E4EB15D2466 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-SemiBold.ttf"; path = "../src/assets/fonts/Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		36A9D1E502C042A5B11A59F0 /* index.ts */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = index.ts; path = ../src/assets/fonts/index.ts; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-atHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome.debug.xcconfig"; path = "Target Support Files/Pods-atHome/Pods-atHome.debug.xcconfig"; sourceTree = "<group>"; };
 		3ED4FAF30D574D868F3D6477 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Medium.ttf"; path = "../src/assets/fonts/Manrope-Medium.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-atHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome.release.xcconfig"; path = "Target Support Files/Pods-atHome/Pods-atHome.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-atHome-atHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome-atHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-atHome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-atHome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		690125106C6249CC96D71FD8 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-ExtraBold.ttf"; path = "../src/assets/fonts/Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
-		811C7CC9054548C0B0C52933 /* index.ts */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = index.ts; path = ../src/assets/fonts/index.ts; sourceTree = "<group>"; };
+		80B2ACFCBDB74215BF88F6F0 /* TikTokDisplay-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TikTokDisplay-Regular.otf"; path = "../src/assets/fonts/TikTokDisplay-Regular.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = atHome/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-atHome-atHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome-atHomeTests.release.xcconfig"; path = "Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		94DDD3364A4145E6AF4C5F46 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Regular.ttf"; path = "../src/assets/fonts/Manrope-Regular.ttf"; sourceTree = "<group>"; };
+		A3B648D42FCF424F889D7820 /* TikTokText-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TikTokText-Medium.otf"; path = "../src/assets/fonts/TikTokText-Medium.otf"; sourceTree = "<group>"; };
 		B4C38B5C3C764EEEA2152000 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Bold.ttf"; path = "../src/assets/fonts/Manrope-Bold.ttf"; sourceTree = "<group>"; };
+		BE4608EAFC314589A8B8C78F /* TikTokText-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TikTokText-Regular.otf"; path = "../src/assets/fonts/TikTokText-Regular.otf"; sourceTree = "<group>"; };
 		D05E1B3152974411839608CA /* Manrope-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Light.ttf"; path = "../src/assets/fonts/Manrope-Light.ttf"; sourceTree = "<group>"; };
+		D2BA37C43A6A40FDAFF1FD2B /* TikTokDisplay-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TikTokDisplay-Bold.otf"; path = "../src/assets/fonts/TikTokDisplay-Bold.otf"; sourceTree = "<group>"; };
+		EB120F861C2D41FD83DCEC74 /* TikTokDisplay-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TikTokDisplay-Medium.otf"; path = "../src/assets/fonts/TikTokDisplay-Medium.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F169E0FA0FFF4CCEBD264881 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-ExtraLight.ttf"; path = "../src/assets/fonts/Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,7 +187,13 @@
 				3ED4FAF30D574D868F3D6477 /* Manrope-Medium.ttf */,
 				94DDD3364A4145E6AF4C5F46 /* Manrope-Regular.ttf */,
 				334A692F0FF54E4EB15D2466 /* Manrope-SemiBold.ttf */,
-				811C7CC9054548C0B0C52933 /* index.ts */,
+				D2BA37C43A6A40FDAFF1FD2B /* TikTokDisplay-Bold.otf */,
+				EB120F861C2D41FD83DCEC74 /* TikTokDisplay-Medium.otf */,
+				80B2ACFCBDB74215BF88F6F0 /* TikTokDisplay-Regular.otf */,
+				36A9D1E502C042A5B11A59F0 /* index.ts */,
+				00CF4ACB3F2B4D96BF7B21E7 /* TikTokText-Bold.otf */,
+				A3B648D42FCF424F889D7820 /* TikTokText-Medium.otf */,
+				BE4608EAFC314589A8B8C78F /* TikTokText-Regular.otf */,
 			);
 			name = Resources;
 			path = "";
@@ -284,7 +302,13 @@
 				82D057A274F340699B7648AF /* Manrope-Medium.ttf in Resources */,
 				DE2CA996E7E1462197079DC3 /* Manrope-Regular.ttf in Resources */,
 				EBDF9F980E0D403B87C2F524 /* Manrope-SemiBold.ttf in Resources */,
-				86A78A26879C405BBF257D2C /* index.ts in Resources */,
+				A3F874F683FA4A44A8B9A7EE /* TikTokDisplay-Bold.otf in Resources */,
+				091604F81E3B4C6FA1415146 /* TikTokDisplay-Medium.otf in Resources */,
+				8C12240D20E740A49AD11770 /* TikTokDisplay-Regular.otf in Resources */,
+				8A1A0160D5A44BEBA44A0FD3 /* index.ts in Resources */,
+				FE7A8F25092D4A17B3498F42 /* TikTokText-Bold.otf in Resources */,
+				E63BFE9BD37544E1AD0B5315 /* TikTokText-Medium.otf in Resources */,
+				5922D5A8F9044FE0B60CD324 /* TikTokText-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
