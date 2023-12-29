@@ -5,6 +5,7 @@ import React from "react";
 import { Text, TextInput } from "react-native";
 import { Provider } from "react-redux";
 import AppNavigator from "@navigation/AppNavigator";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 // Text.defaultProps = Text.defaultProps || {};
 // Text.defaultProps.allowFontScaling = false;
@@ -14,8 +15,10 @@ import AppNavigator from "@navigation/AppNavigator";
 const App = () => {
   return (
     <Provider store={store}>
-      <AuthNavigator />
-      <Dialog ref={AppNavigator.setRefDialog} />
+      <SafeAreaProvider>
+        <AuthNavigator />
+        <Dialog ref={AppNavigator.setRefDialog} />
+      </SafeAreaProvider>
     </Provider>
   );
 };

@@ -9,7 +9,7 @@ let navigator: any;
 let debounce: any;
 let dialogInstanceRef: any;
 
-function showDialog(params: IShowDialog) {
+function showDialog(params: IShowDialog | any) {
   console.log("showDialog", params);
   Keyboard.dismiss();
   dialogInstanceRef?.showDialog(params);

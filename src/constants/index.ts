@@ -15,3 +15,8 @@ export const INPUT_BUSINESS = {
   placeholder: I18n.t("placeholderSelectRegister"),
   optional: I18n.t("optionalSelectRegister"),
 };
+
+export const INPUT_USER_INFO = {
+  label: I18n.t("labelUserInfoRegister"),
+  placeholder: I18n.t("placeholderUserInfoRegister"),
+};

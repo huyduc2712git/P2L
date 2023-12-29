@@ -15,6 +15,7 @@ export default {
   grey_04: "#F4F4F4",
   grey_05: "#595959",
   grey_06: "#8C8C8C",
+  grey_07: "#737373",
   purple_01: "#5865F2",
   red_01: "#DC2626",
   red_02: "#B91C1C",

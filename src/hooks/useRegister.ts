@@ -4,6 +4,7 @@ import BusinessPopup from "@screens/Dialog/Components/BusinessPopup";
 import { useMemo, useState } from "react";
 
 const useRegister = () => {
+  const [part, setPart] = useState(1);
   const [errorMessage, setErrorMessage] = useState("");
   const [valueSelect, setValueSelectet] = useState("");
 
@@ -31,13 +32,19 @@ const useRegister = () => {
     // setValueSelectet("Trải nghiệm văn hoá");
     AppNavigator.showDialog({
       screen: BusinessPopup,
+      setValueSelectet: setValueSelectet,
     });
   };
 
-  const onNextPart = () => {
-    setErrorMessage("Vui lòng điền vào trường hợp này");
+  const onNextPart = (part: number) => {
+    setPart(part);
+  };
+
+  const onBackPart = (part: number) => {
+    setPart(part);
   };
   return {
+    part,
     onHandleChageText,
     errorMessage,
     setErrorMessage,
@@ -46,6 +53,7 @@ const useRegister = () => {
     onHandleOnBlur,
     valueSelect,
     onNextPart,
+    onBackPart,
   };
 };
 export default useRegister;

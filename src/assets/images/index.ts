@@ -7,6 +7,7 @@ const getLinkFile = (fileName: string) => {
 export const AppImages = {
   background_kid_song: getLinkFile("image.png"),
   ic_directional: require("./ic_directional.png"),
+  ic_closed: require("./ic_closed.png"),
 };
 
 export const LoginImages = {

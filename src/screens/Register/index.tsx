@@ -1,131 +1,33 @@
-import { Images } from "@assets/images";
-import { Fonts } from "@assets/index";
-import ButtonAnimation from "@components/ButtonAnimation";
-import ButtonComponent from "@components/ButtonComponent";
-import InputComponent from "@components/InputComponent";
-import Colors from "@constants/Colors";
-import { INPUT_BUSINESS, INPUT_CODE, INPUT_NAME } from "@constants/index";
 import useRegister from "@hooks/useRegister";
-import InsetStyleUtil from "@utils/InsetStyleUtil";
-import { ScaleFontPortrait, ScalePortrait } from "@utils/ScalePortraitUtil";
-import React from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  TouchableWithoutFeedback,
-  Keyboard,
-} from "react-native";
-import { I18n } from "react-redux-i18n";
+import React, { useMemo } from "react";
+import StoreInformation from "./StoreInformation";
+import ContactInformation from "./ContactInformation";
+import PhoneNumberAndPassword from "./PhoneNumberAndPassword";
 
 interface IRegisterProps {}
 
 const Register = (props: IRegisterProps) => {
   const {} = props || {};
-  const {
-    onHandleChageText,
-    errorMessage,
-    setErrorMessage,
-    onHandleOnBlur,
-    valueSelect,
-    onShowPopupBusiness,
-    onNextPart,
-    handleGoBack,
-  } = useRegister();
-  const insets = InsetStyleUtil();
-  return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <View style={[styles.container, insets]}>
-        <View style={styles.markIconBack}>
-          <ButtonAnimation
-            onPress={handleGoBack}
-            source={Images.ic_directional}
-            style={styles.iconBack}
-          />
-        </View>
-        <Text style={styles.counter}>{"1 / 4"}</Text>
-        <Text style={styles.titleRegister}>{I18n.t("titleRegister")}</Text>
-        <Text style={styles.descRegister}>{I18n.t("descRegister")}</Text>
-        <InputComponent
-          onChangeText={onHandleChageText}
-          style={styles.marginTopInputFirst}
-          label={INPUT_NAME.label}
-          onBlur={onHandleOnBlur}
-          placeholder={INPUT_NAME.placeholder}
-          error={errorMessage}
-          setErrorMessage={setErrorMessage}
-        />
-        <InputComponent
-          onChangeText={onHandleChageText}
-          style={styles.marginTopInput}
-          label={INPUT_CODE.label}
-          placeholder={INPUT_CODE.placeholder}
-          error={errorMessage}
-          setErrorMessage={setErrorMessage}
-        />
-        <InputComponent
-          type={"SELECT"}
-          editable={false}
-          value={valueSelect}
-          onPress={onShowPopupBusiness}
-          onChangeText={onHandleChageText}
-          style={styles.marginTopInput}
-          labelSelect={INPUT_BUSINESS.label}
-          placeholder={INPUT_BUSINESS.placeholder}
-          optional={INPUT_BUSINESS.optional}
-        />
-        <ButtonComponent
-          onPress={onNextPart}
-          styleContainer={styles.buttonComponent}
-          title={I18n.t("continueRegister")}
-        />
-      </View>
-    </TouchableWithoutFeedback>
-  );
+  const { part, onNextPart, onBackPart } = useRegister();
+  const Component = useMemo(() => {
+    switch (part) {
+      case 1:
+        return StoreInformation;
+        break;
+      case 2:
+        return ContactInformation;
+        break;
+      case 3:
+        return PhoneNumberAndPassword;
+        break;
+      // case 4:
+      //   return PhoneNumberAndPassword;
+      //   break;
+      default:
+        return StoreInformation;
+    }
+  }, [part]);
+  return <Component onBackPart={onBackPart} onNextPart={onNextPart} />;
 };
 
 export default Register;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: ScalePortrait(20),
-    backgroundColor: Colors.white,
-  },
-  buttonComponent: {
-    flex: 1,
-    justifyContent: "flex-end",
-  },
-  marginTopInput: {
-    marginTop: ScalePortrait(24),
-  },
-  marginTopInputFirst: {
-    marginTop: ScalePortrait(32),
-  },
-  iconBack: {
-    width: ScalePortrait(24),
-    aspectRatio: 1,
-    transform: [{ rotate: "90deg" }],
-  },
-  counter: {
-    marginTop: ScalePortrait(16),
-    fontSize: ScaleFontPortrait(16),
-    color: Colors.black_01,
-    fontFamily: Fonts.TikTokText_Regular,
-  },
-  titleRegister: {
-    marginTop: ScalePortrait(12),
-    fontSize: ScaleFontPortrait(24),
-    color: Colors.black_01,
-    fontFamily: Fonts.TikTokText_Bold,
-  },
-  descRegister: {
-    marginTop: ScalePortrait(16),
-    fontSize: ScaleFontPortrait(16),
-    color: Colors.grey_05,
-    fontFamily: Fonts.TikTokText_Regular,
-  },
-  markIconBack: {
-    paddingVertical: ScalePortrait(13),
-  },
-});
