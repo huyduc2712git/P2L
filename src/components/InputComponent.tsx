@@ -26,6 +26,7 @@ interface IInputComponentProps extends TextInputProps {
   onPress?: () => void;
   labelSelect?: string;
   optional?: string;
+  hiddenDirectional?: boolean;
 }
 
 const InputComponent = (props: IInputComponentProps) => {
@@ -40,6 +41,7 @@ const InputComponent = (props: IInputComponentProps) => {
     labelSelect,
     optional,
     type,
+    hiddenDirectional,
     ...textInputProps
   } = props || {};
 
@@ -76,26 +78,39 @@ const InputComponent = (props: IInputComponentProps) => {
       {!type ? (
         <TextInput
           placeholderTextColor={Colors.grey_06}
-          style={[styles.containerTextInput, { borderColor }]}
+          style={[
+            styles.containerTextInput,
+            { borderColor },
+            { marginTop: label ? ScalePortrait(8) : 0 },
+          ]}
           onFocus={onHandleOnFocus}
           onBlur={onHandleOnBlur}
           {...textInputProps}
         />
       ) : (
         <ButtonAnimation onPress={onPress}>
-          <View pointerEvents="none" style={styles.backgroundInputSelect}>
+          <View
+            pointerEvents="none"
+            style={[
+              styles.backgroundInputSelect,
+              { marginTop: labelSelect || label ? ScalePortrait(8) : 0 },
+            ]}
+          >
             <TextInput
+              editable
               placeholderTextColor={Colors.grey_06}
-              style={[styles.containerTextInputSelect]}
+              style={styles.containerTextInputSelect}
               onFocus={onHandleOnFocus}
               onBlur={onHandleOnBlur}
               {...textInputProps}
             />
-            <FastImage
-              resizeMode="contain"
-              source={Images.ic_directional}
-              style={styles.iconDirectional}
-            />
+            {hiddenDirectional ? null : (
+              <FastImage
+                resizeMode="contain"
+                source={Images.ic_directional}
+                style={styles.iconDirectional}
+              />
+            )}
           </View>
         </ButtonAnimation>
       )}
@@ -129,7 +144,6 @@ const styles = StyleSheet.create({
   },
   backgroundInputSelect: {
     borderWidth: 0.5,
-    marginTop: ScalePortrait(8),
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "row",
@@ -149,7 +163,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: ScalePortrait(16),
     fontFamily: Fonts.TikTokText_Regular,
     fontSize: ScaleFontPortrait(16),
-    marginTop: ScalePortrait(8),
     color: Colors.black_01,
   },
   containerTextInputSelect: {

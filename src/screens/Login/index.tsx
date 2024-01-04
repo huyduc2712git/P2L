@@ -1,23 +1,21 @@
 import { Images } from "@assets/images";
 import { Fonts } from "@assets/index";
-import ButtonAnimation from "@components/ButtonAnimation";
 import ButtonComponent from "@components/ButtonComponent";
 import InputComponent from "@components/InputComponent";
 import Colors from "@constants/Colors";
 import useLogin from "@hooks/useLogin";
-import OTPInputView from "@twotalltotems/react-native-otp-input";
 import InsetStyleUtil from "@utils/InsetStyleUtil";
 import { ScaleFontPortrait, ScalePortrait } from "@utils/ScalePortraitUtil";
-import React, { useState } from "react";
+import React from "react";
 import {
   View,
   StyleSheet,
   TextInput,
   TouchableWithoutFeedback,
   Keyboard,
+  Text,
 } from "react-native";
 import FastImage from "react-native-fast-image";
-import { I18n } from "react-redux-i18n";
 
 interface ILoginProps {}
 
@@ -29,9 +27,19 @@ const Login = (props: ILoginProps) => {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={[styles.container, insets]}>
+        <FastImage
+          resizeMode="contain"
+          source={Images.ic_logo}
+          style={{
+            width: ScalePortrait(151),
+            height: ScalePortrait(53),
+            marginTop: ScalePortrait(80),
+            alignSelf: "center",
+          }}
+        />
         <InputComponent
           placeholder={"Nhap so dien thoai hoac email"}
-          style={{ marginTop: ScalePortrait(132) }}
+          style={{ marginTop: ScalePortrait(52) }}
         />
         <InputComponent
           secureTextEntry
@@ -41,8 +49,20 @@ const Login = (props: ILoginProps) => {
         <ButtonComponent
           onPress={onSumitLogin}
           styleContainer={{ marginTop: ScalePortrait(20) }}
-          title="Dang xuat"
+          title="Đăng nhập"
         />
+        <Text
+          onPress={() => console.log("Quên mật khẩu")}
+          style={{
+            marginTop: ScalePortrait(24),
+            fontFamily: Fonts.TikTokText_Regular,
+            color: Colors.blue_02,
+            fontSize: ScaleFontPortrait(16),
+            lineHeight: ScaleFontPortrait(18),
+          }}
+        >
+          {"Quên mật khẩu"}?
+        </Text>
       </View>
     </TouchableWithoutFeedback>
   );

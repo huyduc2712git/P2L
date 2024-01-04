@@ -1,17 +1,13 @@
 import { Images } from "@assets/images";
 import { Fonts } from "@assets/index";
+import AnimatiedPopup, { AnimatiedPopupRef } from "@components/AnimatedPopup";
 import ButtonAnimation from "@components/ButtonAnimation";
 import Colors from "@constants/Colors";
 import { IDataBusines, dataBusiness } from "@data/dataBusiness";
 import { ScaleFontPortrait, ScalePortrait } from "@utils/ScalePortraitUtil";
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 import { Text, View, StyleSheet, FlatList, Pressable } from "react-native";
-import Animated, {
-  runOnJS,
-  useAnimatedStyle,
-  useSharedValue,
-  withTiming,
-} from "react-native-reanimated";
+import { useSharedValue } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 interface IBusinessPopupProps {
@@ -32,55 +28,26 @@ const BusinessPopup = (props: IBusinessPopupProps) => {
     timeAniamtion = TIME_DEFAULT,
     titleHeader,
   } = props || {};
-  console.log("data", data);
 
   const insets = useSafeAreaInsets();
-  const offsetY = useSharedValue(VALUE_OFFSET);
-  const offsetOpacity = useSharedValue(1);
-
-  const animatedStyleY = useAnimatedStyle(() => ({
-    transform: [{ translateY: offsetY.value }],
-  }));
-
-  const animatedStyleOpdacity = useAnimatedStyle(() => ({
-    backgroundColor: Colors.opacity_black_60,
-  }));
+  const offset = useSharedValue(VALUE_OFFSET);
+  const animatedPopupRef = useRef<AnimatiedPopupRef>(null);
 
   const onClosed = () => {
     closeDialog?.();
   };
 
   const handleClosedStyleY = () => {
-    offsetY.value = withTiming(
-      VALUE_OFFSET,
-      { duration: timeAniamtion },
-      () => {
-        runOnJS(handleClosedStyleOpacity)();
-        runOnJS(onClosed)();
-      }
-    );
+    animatedPopupRef.current?.downAnimation(() => {
+      onClosed();
+    });
   };
-
-  const handleClosedStyleOpacity = () => {
-    offsetOpacity.value = withTiming(0, { duration: 500 });
-  };
-
-  useEffect(() => {
-    offsetY.value = withTiming(0, { duration: timeAniamtion });
-  }, []);
 
   const handleSetItem = (value: string) => {
     if (setValueSelectet) {
       setValueSelectet(value);
     }
-    offsetY.value = withTiming(
-      VALUE_OFFSET,
-      { duration: timeAniamtion },
-      () => {
-        runOnJS(handleClosedStyleOpacity)();
-        runOnJS(onClosed)();
-      }
-    );
+    handleClosedStyleY();
   };
 
   const _renderItem = (item: IDataBusines) => {
@@ -94,30 +61,34 @@ const BusinessPopup = (props: IBusinessPopupProps) => {
   };
 
   return (
-    <Animated.View style={[styles.container, animatedStyleOpdacity]}>
-      <Animated.View style={[styles.backgroundModal, animatedStyleY]}>
-        <View style={styles.markHeader}>
-          <Text style={styles.titleHeader}>{"Lĩnh vực kinh doanh"}</Text>
-          <View style={styles.markButtonClosed}>
-            <ButtonAnimation
-              onPress={handleClosedStyleY}
-              source={Images.ic_closed}
-              style={styles.iconClosed}
-            />
-          </View>
+    <AnimatiedPopup
+      ref={animatedPopupRef}
+      valueOffset={VALUE_OFFSET}
+      style={styles.backgroundModal}
+      offset={offset}
+      timeAnimation={timeAniamtion}
+    >
+      <View style={styles.markHeader}>
+        <Text style={styles.titleHeader}>{titleHeader}</Text>
+        <View style={styles.markButtonClosed}>
+          <ButtonAnimation
+            onPress={handleClosedStyleY}
+            source={Images.ic_closed}
+            style={styles.iconClosed}
+          />
         </View>
-        <View
-          style={[
-            styles.markContent,
-            {
-              marginBottom: insets.bottom,
-            },
-          ]}
-        >
-          <FlatList data={data} renderItem={({ item }) => _renderItem(item)} />
-        </View>
-      </Animated.View>
-    </Animated.View>
+      </View>
+      <View
+        style={[
+          styles.markContent,
+          {
+            marginBottom: insets.bottom,
+          },
+        ]}
+      >
+        <FlatList data={data} renderItem={({ item }) => _renderItem(item)} />
+      </View>
+    </AnimatiedPopup>
   );
 };
 

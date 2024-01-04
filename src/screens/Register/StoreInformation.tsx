@@ -18,6 +18,7 @@ import {
 } from "react-native";
 import { I18n } from "react-redux-i18n";
 import HeaderRegister from "./HeaderRegister";
+import AppNavigator from "@navigation/AppNavigator";
 
 interface IStoreInformationProps {
   onNextPart?: (part: number) => void;
@@ -39,7 +40,7 @@ const StoreInformation = (props: IStoreInformationProps) => {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={[styles.container, insets]}>
         <HeaderRegister
-          handleGoBack={undefined}
+          handleGoBack={() => AppNavigator.goBack()}
           indexPart={part}
           descHeader={I18n.t("descRegister")}
         />
@@ -72,7 +73,7 @@ const StoreInformation = (props: IStoreInformationProps) => {
           optional={INPUT_BUSINESS.optional}
         />
         <ButtonComponent
-          onPress={() => onNextPart && onNextPart(2)}
+          onPress={() => onNextPart && onNextPart?.(part + 1)}
           styleContainer={styles.buttonComponent}
           title={I18n.t("continueRegister")}
         />

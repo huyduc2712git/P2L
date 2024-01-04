@@ -1,7 +1,7 @@
 import AppNavigator from "@navigation/AppNavigator";
 import { ROUTES } from "@navigation/routes";
 import BusinessPopup from "@screens/Dialog/Components/BusinessPopup";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const useRegister = () => {
   const [part, setPart] = useState(1);
@@ -29,20 +29,25 @@ const useRegister = () => {
   };
 
   const onShowPopupBusiness = () => {
-    // setValueSelectet("Trải nghiệm văn hoá");
-    AppNavigator.showDialog({
-      screen: BusinessPopup,
-      setValueSelectet: setValueSelectet,
-    });
+    if (part === 2) {
+      console.log("sddsdss");
+    } else {
+      AppNavigator.showDialog({
+        screen: BusinessPopup,
+        setValueSelectet: setValueSelectet,
+        titleHeader: "Lĩnh vực kinh doanh",
+      });
+    }
   };
 
-  const onNextPart = (part: number) => {
-    setPart(part);
+  const onNextPart = (partValue: number) => {
+    setPart(partValue);
   };
 
-  const onBackPart = (part: number) => {
-    setPart(part);
+  const onBackPart = (partValue: number) => {
+    setPart(partValue);
   };
+
   return {
     part,
     onHandleChageText,

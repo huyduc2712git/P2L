@@ -7,22 +7,18 @@ import PhoneNumberAndPassword from "./PhoneNumberAndPassword";
 interface IRegisterProps {}
 
 const Register = (props: IRegisterProps) => {
-  const {} = props || {};
+  const {} = props ?? {};
   const { part, onNextPart, onBackPart } = useRegister();
   const Component = useMemo(() => {
     switch (part) {
       case 1:
         return StoreInformation;
-        break;
       case 2:
         return ContactInformation;
-        break;
       case 3:
         return PhoneNumberAndPassword;
-        break;
       // case 4:
       //   return PhoneNumberAndPassword;
-      //   break;
       default:
         return StoreInformation;
     }

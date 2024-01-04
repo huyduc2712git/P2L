@@ -9,12 +9,13 @@
       "@navigation": ["src/navigation"],
       "@navigation/*": ["src/navigation/*"],
       "@utils/*": ["src/utils/*"],
+      "@types/*": ["src/types/*"],
       "@assets/*": ["src/assets/*"],
       "@constants/*": ["src/constants/*"],
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
       "@data/*": ["src/data/*"],
-      "@redux/*": ["src/redux/*"],
+      "@redux/*": ["src/redux/*"]
     },
     "forceConsistentCasingInFileNames": true
   }
