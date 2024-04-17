@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useMemo } from "react";
 import {
   Text,
   View,
@@ -18,11 +18,33 @@ interface IButtonComponentProps {
   styleTitleButton?: StyleProp<TextStyle>;
   title?: string;
   onPress?: () => void;
+  ColorType?: "blue" | "red" | "green";
+}
+
+export interface IAttributeColor {
+  borderColor?: string;
+  backgroundColor?: string;
+  shadowColor?: string;
 }
 
 const ButtonComponent = (props: IButtonComponentProps) => {
-  const { styleContainer, styleTitleButton, style, title, onPress } =
-    props || {};
+  const {
+    styleContainer,
+    styleTitleButton,
+    style,
+    title,
+    onPress,
+    ColorType = "blue",
+  } = props || {};
+
+  const SET_COLORS: Record<string, IAttributeColor> = useMemo(() => {
+    return {
+      blue: {},
+      red: {},
+      green: {},
+    };
+  }, []);
+  const attribute = SET_COLORS[ColorType];
   return (
     <View style={styleContainer}>
       <ButtonAnimation onPress={onPress}>

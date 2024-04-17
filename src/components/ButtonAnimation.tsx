@@ -1,4 +1,3 @@
-import { PlatformUtils } from "@utils/PlatformUtils";
 import React, { memo, useState } from "react";
 import {
   Pressable,
@@ -24,11 +23,20 @@ interface IButtonProps {
   source?: Source;
   onPress?: () => void;
   disabled?: boolean;
+  stiffness?: number;
 }
-const { isAndroid } = PlatformUtils;
+
+const STIFFNESS = 2000;
 
 const ButtonAnimation = (props: IButtonProps) => {
-  const { style, source, onPress, children, disabled } = props;
+  const {
+    style,
+    source,
+    onPress,
+    children,
+    disabled,
+    stiffness = STIFFNESS,
+  } = props;
   const [isPressing, setIsPressing] = useState(false);
   const [disable, setDisable] = useState(false);
 
@@ -38,7 +46,7 @@ const ButtonAnimation = (props: IButtonProps) => {
     if (!isPressing) {
       setIsPressing(true);
 
-      scale.value = withSpring(0.9, { stiffness: 200 });
+      scale.value = withSpring(0.9, { stiffness: stiffness });
     }
   };
   const onEvent = () => {
@@ -51,7 +59,9 @@ const ButtonAnimation = (props: IButtonProps) => {
 
   const handleButtonPressOut = () => {
     setIsPressing(false);
-    scale.value = withSpring(1, { stiffness: 2000 }, () => runOnJS(onEvent)());
+    scale.value = withSpring(1, { stiffness: stiffness }, () =>
+      runOnJS(onEvent)()
+    );
   };
 
   const animatedStyle = useAnimatedStyle(() => {
