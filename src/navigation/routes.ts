@@ -14,6 +14,9 @@ export const ROUTES = {
   REGISTER_SCREEN: {
     name: "REGISTER_SCREEN",
   },
+  AT_SPEAK: {
+    name: "AT_SPEAK",
+  },
 };
 
 export type TRoute = {
