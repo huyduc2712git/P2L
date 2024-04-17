@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* atHomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* atHomeTests.m */; };
 		091604F81E3B4C6FA1415146 /* TikTokDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB120F861C2D41FD83DCEC74 /* TikTokDisplay-Medium.otf */; };
-		0C80B921A6F3F58F76C31292 /* libPods-atHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-atHome.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		16BEBF27815849D3A922362E /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F169E0FA0FFF4CCEBD264881 /* Manrope-ExtraLight.ttf */; };
 		5922D5A8F9044FE0B60CD324 /* TikTokText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BE4608EAFC314589A8B8C78F /* TikTokText-Regular.otf */; };
 		6EF5EDD444F34790BF34C509 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D05E1B3152974411839608CA /* Manrope-Light.ttf */; };
-		7699B88040F8A987B510C191 /* libPods-atHome-atHomeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-atHome-atHomeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		82D057A274F340699B7648AF /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ED4FAF30D574D868F3D6477 /* Manrope-Medium.ttf */; };
 		8A1A0160D5A44BEBA44A0FD3 /* index.ts in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D1E502C042A5B11A59F0 /* index.ts */; };
 		8BE399E2F44549ACBC59CD1F /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 690125106C6249CC96D71FD8 /* Manrope-ExtraBold.ttf */; };
 		8C12240D20E740A49AD11770 /* TikTokDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80B2ACFCBDB74215BF88F6F0 /* TikTokDisplay-Regular.otf */; };
 		A3F874F683FA4A44A8B9A7EE /* TikTokDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D2BA37C43A6A40FDAFF1FD2B /* TikTokDisplay-Bold.otf */; };
+		B3C09B8E8C4DD20143FA7694 /* libPods-atHome-atHomeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B6197A252E6D787CC7E805 /* libPods-atHome-atHomeTests.a */; };
 		DE2CA996E7E1462197079DC3 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94DDD3364A4145E6AF4C5F46 /* Manrope-Regular.ttf */; };
 		E63BFE9BD37544E1AD0B5315 /* TikTokText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3B648D42FCF424F889D7820 /* TikTokText-Medium.otf */; };
 		EBDF9F980E0D403B87C2F524 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 334A692F0FF54E4EB15D2466 /* Manrope-SemiBold.ttf */; };
 		F556CF25785444A4812FE3AD /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4C38B5C3C764EEEA2152000 /* Manrope-Bold.ttf */; };
 		FE7A8F25092D4A17B3498F42 /* TikTokText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 00CF4ACB3F2B4D96BF7B21E7 /* TikTokText-Bold.otf */; };
+		FF34F7AD1F8654DEFB23AF69 /* libPods-atHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5A9FDBD1A4D6E1B46B75C5 /* libPods-atHome.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,26 +51,26 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = atHome/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = atHome/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = atHome/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-atHome-atHomeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-atHome-atHomeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27801E7D277C8A704D7FFFFE /* Pods-atHome-atHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome-atHomeTests.release.xcconfig"; path = "Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		334A692F0FF54E4EB15D2466 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-SemiBold.ttf"; path = "../src/assets/fonts/Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		35ED13D17278461128A1ADE4 /* Pods-atHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome.debug.xcconfig"; path = "Target Support Files/Pods-atHome/Pods-atHome.debug.xcconfig"; sourceTree = "<group>"; };
 		36A9D1E502C042A5B11A59F0 /* index.ts */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = index.ts; path = ../src/assets/fonts/index.ts; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-atHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome.debug.xcconfig"; path = "Target Support Files/Pods-atHome/Pods-atHome.debug.xcconfig"; sourceTree = "<group>"; };
 		3ED4FAF30D574D868F3D6477 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Medium.ttf"; path = "../src/assets/fonts/Manrope-Medium.ttf"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-atHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome.release.xcconfig"; path = "Target Support Files/Pods-atHome/Pods-atHome.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-atHome-atHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome-atHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-atHome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-atHome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		690125106C6249CC96D71FD8 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-ExtraBold.ttf"; path = "../src/assets/fonts/Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
 		80B2ACFCBDB74215BF88F6F0 /* TikTokDisplay-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "TikTokDisplay-Regular.otf"; path = "../src/assets/fonts/TikTokDisplay-Regular.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = atHome/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-atHome-atHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome-atHomeTests.release.xcconfig"; path = "Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		94DDD3364A4145E6AF4C5F46 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Regular.ttf"; path = "../src/assets/fonts/Manrope-Regular.ttf"; sourceTree = "<group>"; };
 		A3B648D42FCF424F889D7820 /* TikTokText-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "TikTokText-Medium.otf"; path = "../src/assets/fonts/TikTokText-Medium.otf"; sourceTree = "<group>"; };
 		B4C38B5C3C764EEEA2152000 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Bold.ttf"; path = "../src/assets/fonts/Manrope-Bold.ttf"; sourceTree = "<group>"; };
 		BE4608EAFC314589A8B8C78F /* TikTokText-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "TikTokText-Regular.otf"; path = "../src/assets/fonts/TikTokText-Regular.otf"; sourceTree = "<group>"; };
 		D05E1B3152974411839608CA /* Manrope-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Light.ttf"; path = "../src/assets/fonts/Manrope-Light.ttf"; sourceTree = "<group>"; };
 		D2BA37C43A6A40FDAFF1FD2B /* TikTokDisplay-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "TikTokDisplay-Bold.otf"; path = "../src/assets/fonts/TikTokDisplay-Bold.otf"; sourceTree = "<group>"; };
+		D5B6197A252E6D787CC7E805 /* libPods-atHome-atHomeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-atHome-atHomeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB120F861C2D41FD83DCEC74 /* TikTokDisplay-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "TikTokDisplay-Medium.otf"; path = "../src/assets/fonts/TikTokDisplay-Medium.otf"; sourceTree = "<group>"; };
+		EC5A9FDBD1A4D6E1B46B75C5 /* libPods-atHome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-atHome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		ED6EB62E2A8D323554C5D2A4 /* Pods-atHome-atHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome-atHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EFB757E58E8AF2DFF0B2BD61 /* Pods-atHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atHome.release.xcconfig"; path = "Target Support Files/Pods-atHome/Pods-atHome.release.xcconfig"; sourceTree = "<group>"; };
 		F169E0FA0FFF4CCEBD264881 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-ExtraLight.ttf"; path = "../src/assets/fonts/Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-atHome-atHomeTests.a in Frameworks */,
+				B3C09B8E8C4DD20143FA7694 /* libPods-atHome-atHomeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-atHome.a in Frameworks */,
+				FF34F7AD1F8654DEFB23AF69 /* libPods-atHome.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-atHome.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-atHome-atHomeTests.a */,
+				EC5A9FDBD1A4D6E1B46B75C5 /* libPods-atHome.a */,
+				D5B6197A252E6D787CC7E805 /* libPods-atHome-atHomeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,10 +169,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-atHome.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-atHome.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-atHome-atHomeTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-atHome-atHomeTests.release.xcconfig */,
+				35ED13D17278461128A1ADE4 /* Pods-atHome.debug.xcconfig */,
+				EFB757E58E8AF2DFF0B2BD61 /* Pods-atHome.release.xcconfig */,
+				ED6EB62E2A8D323554C5D2A4 /* Pods-atHome-atHomeTests.debug.xcconfig */,
+				27801E7D277C8A704D7FFFFE /* Pods-atHome-atHomeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -205,12 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "atHomeTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				07B2827DDB4B689B9A3239CA /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				DD95AB0039418990245C9614 /* [CP] Embed Pods Frameworks */,
+				120E0C2385F36B3D73497CD9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,14 +226,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "atHome" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				3ACE6D3056A6B5D1AEE15DB1 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				69A020BF24FEAFD2E226A022 /* [CP] Embed Pods Frameworks */,
+				505A4AA6C82129ED2FEB9F4F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,24 +330,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-atHome/Pods-atHome-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-atHome/Pods-atHome-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-atHome/Pods-atHome-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		07B2827DDB4B689B9A3239CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,7 +352,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		120E0C2385F36B3D73497CD9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3ACE6D3056A6B5D1AEE15DB1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,24 +391,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		505A4AA6C82129ED2FEB9F4F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -425,21 +408,38 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-atHome/Pods-atHome-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+		69A020BF24FEAFD2E226A022 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-atHome/Pods-atHome-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-atHome/Pods-atHome-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-atHome/Pods-atHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD95AB0039418990245C9614 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-atHome-atHomeTests/Pods-atHome-atHomeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -494,9 +494,10 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-atHome-atHomeTests.debug.xcconfig */;
+			baseConfigurationReference = ED6EB62E2A8D323554C5D2A4 /* Pods-atHome-atHomeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = F4LBU2XFFQ;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -521,10 +522,11 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-atHome-atHomeTests.release.xcconfig */;
+			baseConfigurationReference = 27801E7D277C8A704D7FFFFE /* Pods-atHome-atHomeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = F4LBU2XFFQ;
 				INFOPLIST_FILE = atHomeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -545,7 +547,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-atHome.debug.xcconfig */;
+			baseConfigurationReference = 35ED13D17278461128A1ADE4 /* Pods-atHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -580,7 +582,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-atHome.release.xcconfig */;
+			baseConfigurationReference = EFB757E58E8AF2DFF0B2BD61 /* Pods-atHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -680,7 +682,10 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 			};
@@ -750,7 +755,10 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

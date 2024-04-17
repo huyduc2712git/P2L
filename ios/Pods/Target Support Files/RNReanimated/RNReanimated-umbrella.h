@@ -31,6 +31,7 @@
 #import "READisplayLink.h"
 #import "REAModule.h"
 #import "REANodesManager.h"
+#import "REASlowAnimations.h"
 #import "REAUIKit.h"
 #import "REAUtils.h"
 #import "RNGestureHandlerStateManager.h"

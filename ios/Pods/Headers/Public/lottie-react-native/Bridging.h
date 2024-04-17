@@ -1,1 +1,1 @@
-../../../../../node_modules/lottie-react-native/ios/LottieReactNative/Bridging.h
+../../../../../node_modules/lottie-react-native/src/ios/LottieReactNative/Bridging.h
