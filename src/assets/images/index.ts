@@ -16,6 +16,10 @@ export const LoginImages = {
   bg_login_corgi: require("./bg_login_corgi.png"),
 };
 
+export const ATSpeakImages = {
+  ic_micro: require("./ic_micro.png"),
+};
+
 export const HomeImages = {
   bg_shoes: require("./bg_shoes.png"),
   ic_search: require("./ic_search.png"),
@@ -29,4 +33,5 @@ export const Images = {
   ...HomeImages,
   ...LoginImages,
   ...ProfileImage,
+  ...ATSpeakImages,
 };

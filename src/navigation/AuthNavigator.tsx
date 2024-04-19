@@ -28,7 +28,7 @@ function AuthNavigator() {
       onReady={AppNavigator.onTrackScreenChange}
     >
       <Stack.Navigator
-        initialRouteName={ROUTES.AT_SPEAK.name}
+        initialRouteName={ROUTES.LOGIN_SCREEN.name}
         screenOptions={{ gestureEnabled: false }}
       >
         {Object.values(ROUTES).map((route: TRoute, index: number) => {

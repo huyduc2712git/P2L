@@ -5,6 +5,7 @@ export default {
   blue_01: "#0F294D",
   blue_02: "#3F80FF",
   blue_03: "#0F172A",
+  blue_04: "#0F1035",
   green_01: "#0C3B2E",
   green_02: "#6D9773",
   brown_01: "#BB8A52",
