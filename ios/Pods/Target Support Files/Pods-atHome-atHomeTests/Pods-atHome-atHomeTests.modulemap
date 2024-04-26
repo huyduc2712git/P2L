@@ -1,6 +1,0 @@
-module Pods_atHome_atHomeTests {
-  umbrella header "Pods-atHome-atHomeTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

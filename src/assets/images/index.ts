@@ -9,6 +9,7 @@ export const AppImages = {
   ic_directional: require("./ic_directional.png"),
   ic_closed: require("./ic_closed.png"),
   ic_logo: require("./ic_logo.png"),
+  ic_left_arrow: require("./ic_left_arrow.png"),
 };
 
 export const LoginImages = {
@@ -19,6 +20,8 @@ export const LoginImages = {
 export const ATSpeakImages = {
   ic_micro: require("./ic_micro.png"),
 };
+
+export const SettingImages = {};
 
 export const HomeImages = {
   bg_shoes: require("./bg_shoes.png"),
@@ -34,4 +37,5 @@ export const Images = {
   ...LoginImages,
   ...ProfileImage,
   ...ATSpeakImages,
+  ...SettingImages,
 };

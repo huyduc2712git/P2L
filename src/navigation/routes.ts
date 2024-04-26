@@ -14,8 +14,11 @@ export const ROUTES = {
   REGISTER_SCREEN: {
     name: "REGISTER_SCREEN",
   },
-  AT_SPEAK: {
-    name: "AT_SPEAK",
+  AT_SPEAK_SCREEN: {
+    name: "AT_SPEAK_SCREEN",
+  },
+  SETTING_SCREEN: {
+    name: "SETTING_SCREEN",
   },
 };
 
