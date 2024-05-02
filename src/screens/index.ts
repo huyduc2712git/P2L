@@ -5,6 +5,7 @@ import VERIFY_OTP_SCREEN from "./VerifyOTP";
 import REGISTER_SCREEN from "./Register";
 import AT_SPEAK_SCREEN from "./ATSpeak";
 import SETTING_SCREEN from "./Setting";
+import CHAT_BOX_SCREEN from "./ChatBox";
 
 export default {
   ONBOARDING_SCREEN,
@@ -14,4 +15,5 @@ export default {
   REGISTER_SCREEN,
   AT_SPEAK_SCREEN,
   SETTING_SCREEN,
+  CHAT_BOX_SCREEN,
 };

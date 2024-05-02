@@ -20,6 +20,9 @@ export const ROUTES = {
   SETTING_SCREEN: {
     name: "SETTING_SCREEN",
   },
+  CHAT_BOX_SCREEN: {
+    name: "CHAT_BOX_SCREEN",
+  },
 };
 
 export type TRoute = {
