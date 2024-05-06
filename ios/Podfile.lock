@@ -509,10 +509,10 @@ PODS:
     - React-Core
     - SDWebImage (~> 5.11.1)
     - SDWebImageWebPCoder (~> 0.8.4)
-  - RNGestureHandler (2.16.0):
+  - RNGestureHandler (2.16.1):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
-  - RNReanimated (3.8.1):
+  - RNReanimated (3.10.0):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
     - ReactCommon/turbomodule/core
@@ -786,8 +786,8 @@ SPEC CHECKSUMS:
   ReactCommon: 5f704096ccf7733b390f59043b6fa9cc180ee4f6
   RNCClipboard: 41d8d918092ae8e676f18adada19104fa3e68495
   RNFastImage: 5c9c9fed9c076e521b3f509fe79e790418a544e8
-  RNGestureHandler: 69d0a928253547ef857a7be4f453220b9c472e07
-  RNReanimated: f4798af7dede23d41039f0bc372710ead86e90c7
+  RNGestureHandler: 83e5f2116076f0402da654c0541f7fca20d77775
+  RNReanimated: 93610716991840cff571fd75e3b61e97ae0d7919
   RNScreens: 93ae3be2f119d955620f9bbb39ad372adb53b7a9
   RNSound: 6c156f925295bdc83e8e422e7d8b38d33bc71852
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d

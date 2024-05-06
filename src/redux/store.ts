@@ -1,24 +1,17 @@
-import { createStore, combineReducers } from 'redux';
-import { syncTranslationWithStore, i18nReducer } from 'react-redux-i18n';
+import { createStore, combineReducers } from "redux";
+import { syncTranslationWithStore, i18nReducer } from "react-redux-i18n";
 import reducers from "@redux/reducer/rootReducer";
-import i18nAction from './action/i18nAction';
-import localize from '../localization/index';
-import { productApi } from './services/products/productApi';
-import { userApi } from './services/users/userApi';
+import i18nAction from "./action/i18nAction";
+import localize from "../localization/index";
 
 const rootReducer = combineReducers({
   ...reducers,
-  middleware: (getDefaultMiddleware: (arg0: {}) => any[]) =>
-    getDefaultMiddleware({}).concat([
-      productApi.middleware,
-      userApi.middleware,
-    ]),
   i18n: i18nReducer,
 });
 
-const store =  createStore(rootReducer);
+const store = createStore(rootReducer);
 
-syncTranslationWithStore(store)
+syncTranslationWithStore(store);
 store.dispatch(i18nAction.loadTranslations(localize));
 store.dispatch(i18nAction.setLocale("vi"));
 
