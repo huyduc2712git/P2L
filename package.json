@@ -1,5 +1,5 @@
 {
-  "name": "atHome",
+  "name": "p2l",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "start": "react-native start",
     "test": "jest",
     "pod": "cd ios && pod install && cd ..",
-    "xc": "cd ios && open atHome.xcworkspace && cd .."
+    "xc": "cd ios && open p2l.xcworkspace && cd .."
   },
   "dependencies": {
     "@react-native-community/clipboard": "^1.5.1",
