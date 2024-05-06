@@ -21,7 +21,7 @@ interface ILoginProps {}
 
 const Login = (props: ILoginProps) => {
   const {} = props || {};
-  const { onPressBack, onSumitLogin } = useLogin();
+  const { onPressBack, onSumitLogin, setUsername, setPassword } = useLogin();
   const insets = InsetStyleUtil();
 
   return (
@@ -39,11 +39,13 @@ const Login = (props: ILoginProps) => {
         />
         <InputComponent
           placeholder={"Nhap so dien thoai hoac email"}
+          onChangeText={setUsername}
           style={{ marginTop: ScalePortrait(52) }}
         />
         <InputComponent
           secureTextEntry
           placeholder={"Nhap mat khau"}
+          onChangeText={setPassword}
           style={{ marginTop: ScalePortrait(20) }}
         />
         <ButtonComponent
