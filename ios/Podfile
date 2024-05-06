@@ -25,7 +25,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'atHome' do
+target 'P2L' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -45,7 +45,7 @@ target 'atHome' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'atHomeTests' do
+  target 'P2LTests' do
     inherit! :complete
     # Pods for testing
   end
