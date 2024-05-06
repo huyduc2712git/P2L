@@ -69,12 +69,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-atHome-atHomeTests.xcscheme</key>
+		<key>Pods-P2L-P2LTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-atHome.xcscheme</key>
+		<key>Pods-P2L.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
