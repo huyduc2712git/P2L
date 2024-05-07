@@ -23,7 +23,6 @@ const authSlice = createSlice({
       state.error = null;
     },
     loginSuccess(state, action: PayloadAction<string>) {
-      console.log("state", state, action);
       state.loading = false;
       state.token = action.payload;
       state.error = null;
@@ -40,15 +39,3 @@ export const { loginStart, loginSuccess, loginFailure } = authSlice.actions;
 export const selectToken = (state: RootState) => state.auth.token;
 
 export default authSlice.reducer;
-
-export const login =
-  (username: string, password: string) => async (dispatch: any) => {
-    try {
-      dispatch(loginStart());
-      const response = await authRequest.loginAccount(username, password);
-      console.log("response", response);
-      dispatch(loginSuccess(response.token));
-    } catch (error: any) {
-      dispatch(loginFailure(error.message));
-    }
-  };

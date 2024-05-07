@@ -3,8 +3,7 @@ import axios from "axios";
 
 // Tạo một instance của axios
 const apiClient = axios.create({
-  baseURL: "https://192.168.9.205:3000",
-  timeout: 10000,
+  baseURL: "http://192.168.9.205:3000",
   headers: {
     "Content-Type": "application/json",
   },
