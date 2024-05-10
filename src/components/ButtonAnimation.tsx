@@ -1,19 +1,11 @@
 import React, { memo, useState } from "react";
-import {
-  Pressable,
-  StyleProp,
-  View,
-  ImageStyle as RNImageStyle,
-} from "react-native";
-import FastImage, {
-  ImageStyle as FastImageStyle,
-  Source,
-} from "react-native-fast-image";
+import { Pressable, StyleProp, View, ImageStyle as RNImageStyle } from "react-native";
+import FastImage, { ImageStyle as FastImageStyle, Source } from "react-native-fast-image";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
   withSpring,
-  runOnJS,
+  runOnJS
 } from "react-native-reanimated";
 
 type CustomImageStyle = RNImageStyle & FastImageStyle;
@@ -24,19 +16,13 @@ interface IButtonProps {
   onPress?: () => void;
   disabled?: boolean;
   stiffness?: number;
+  tintColor?: string;
 }
 
 const STIFFNESS = 2000;
 
 const ButtonAnimation = (props: IButtonProps) => {
-  const {
-    style,
-    source,
-    onPress,
-    children,
-    disabled,
-    stiffness = STIFFNESS,
-  } = props;
+  const { style, source, onPress, children, disabled, stiffness = STIFFNESS, tintColor } = props;
   const [isPressing, setIsPressing] = useState(false);
   const [disable, setDisable] = useState(false);
 
@@ -59,14 +45,12 @@ const ButtonAnimation = (props: IButtonProps) => {
 
   const handleButtonPressOut = () => {
     setIsPressing(false);
-    scale.value = withSpring(1, { stiffness: stiffness }, () =>
-      runOnJS(onEvent)()
-    );
+    scale.value = withSpring(1, { stiffness: stiffness }, () => runOnJS(onEvent)());
   };
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
-      transform: [{ scale: scale.value }],
+      transform: [{ scale: scale.value }]
     };
   });
 
@@ -79,7 +63,7 @@ const ButtonAnimation = (props: IButtonProps) => {
       >
         <Animated.View style={[animatedStyle]}>
           {source ? (
-            <FastImage resizeMode="contain" style={style} source={source} />
+            <FastImage tintColor={tintColor} resizeMode="contain" style={style} source={source} />
           ) : (
             children
           )}

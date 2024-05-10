@@ -5,8 +5,8 @@ import axios from "axios";
 const apiClient = axios.create({
   baseURL: "http://192.168.9.205:3000",
   headers: {
-    "Content-Type": "application/json",
-  },
+    "Content-Type": "application/json"
+  }
 });
 
 // Interceptor thêm token xác thực
@@ -28,9 +28,10 @@ apiClient.interceptors.response.use(
 );
 
 // Hàm tiện ích cho GET request
-export const get = async (endpoint: string, params: any) => {
+export const get = async (endpoint: string, data: any) => {
+  console.log("endpoint", endpoint, data);
   try {
-    const response = await apiClient.get(endpoint, { params });
+    const response = await apiClient.get(endpoint, { data });
     return response.data;
   } catch (error) {
     throw new Error("Failed to make GET request");
@@ -39,6 +40,7 @@ export const get = async (endpoint: string, params: any) => {
 
 // Hàm tiện ích cho POST request
 export const post = async (endpoint: string, data: any) => {
+  console.log("endpoint", endpoint, data);
   try {
     const response = await apiClient.post(endpoint, data);
     return response.data;
@@ -49,6 +51,7 @@ export const post = async (endpoint: string, data: any) => {
 
 // Hàm tiện ích cho PUT request
 export const put = async (endpoint: string, data: any) => {
+  console.log("endpoint", endpoint, data);
   try {
     const response = await apiClient.put(endpoint, data);
     return response.data;
@@ -60,6 +63,7 @@ export const put = async (endpoint: string, data: any) => {
 // Hàm tiện ích cho DELETE request
 // export const del = (path) => apiClient.delete(path);
 export const del = async (endpoint: string) => {
+  console.log("endpoint", endpoint);
   try {
     const response = await apiClient.delete(endpoint);
     return response.data;
@@ -72,5 +76,5 @@ export default {
   get,
   post,
   put,
-  del,
+  del
 };

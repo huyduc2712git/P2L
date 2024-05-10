@@ -29,11 +29,7 @@ const setRootNavigator = (navigationRef = {}) => {
   }
 };
 
-function navigate(
-  name: string,
-  params = {},
-  key = `${name}_${new Date().getTime()}`
-) {
+function navigate(name: string, params = {}, key = `${name}_${new Date().getTime()}`) {
   Keyboard.dismiss();
   if (navigator) {
     if (debounce) {
@@ -50,7 +46,7 @@ function navigate(
       navigator.navigate({
         name,
         params,
-        key,
+        key
       });
     }
   }
@@ -87,5 +83,5 @@ export default {
   goBack,
   showDialog,
   setRefDialog,
-  dismissAllPopup,
+  dismissAllPopup
 };

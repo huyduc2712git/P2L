@@ -18,7 +18,7 @@ const useLogin = () => {
       login({
         username: username.toLowerCase(),
         password: password.toLowerCase(),
-        callback: () => AppNavigator.navigate(ROUTES.SETTING_SCREEN.name),
+        callback: () => AppNavigator.navigate(ROUTES.CHAT_BOX_SCREEN.name)
       })
     );
   };
@@ -27,7 +27,7 @@ const useLogin = () => {
     onPressBack,
     onSumitLogin,
     setUsername,
-    setPassword,
+    setPassword
   };
 };
 export default useLogin;

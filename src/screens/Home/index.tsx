@@ -23,12 +23,7 @@ const HomeScreen = (props: HomeScreenProps) => {
         {dataCategory.map((item: ICategoryData, index: number) => {
           return (
             <ButtonAnimation onPress={onPressBack}>
-              <View
-                style={[
-                  styles.contentCategory,
-                  { backgroundColor: item.backgroundColor },
-                ]}
-              >
+              <View style={[styles.contentCategory, { backgroundColor: item.backgroundColor }]}>
                 <FastImage
                   resizeMode="contain"
                   source={{ uri: item.imageCategory }}
@@ -48,7 +43,7 @@ const HomeScreen = (props: HomeScreenProps) => {
         style={{
           width: "100%",
           paddingVertical: ScalePortrait(10),
-          paddingHorizontal: ScalePortrait(4),
+          paddingHorizontal: ScalePortrait(4)
         }}
       >
         <ButtonAnimation onPress={onGoLogin}>
@@ -60,7 +55,7 @@ const HomeScreen = (props: HomeScreenProps) => {
               borderRadius: ScalePortrait(60),
               alignItems: "center",
               paddingHorizontal: ScalePortrait(16),
-              justifyContent: "space-between",
+              justifyContent: "space-between"
             }}
           >
             <Text
@@ -68,7 +63,7 @@ const HomeScreen = (props: HomeScreenProps) => {
                 paddingVertical: ScalePortrait(10),
                 fontFamily: Fonts.Manrope_Regular,
                 fontSize: ScaleFontPortrait(14),
-                color: Colors.brown_01,
+                color: Colors.brown_01
               }}
             >
               {I18n.t("homeQuestionSearch")}
@@ -105,14 +100,12 @@ const HomeScreen = (props: HomeScreenProps) => {
                     alignItems: "center",
                     justifyContent: "center",
                     bottom: ScalePortrait(10),
-                    right: ScalePortrait(10),
+                    right: ScalePortrait(10)
                   }}
                 >
                   <ButtonAnimation onPress={onFocusHeart}>
                     <FastImage
-                      source={
-                        isHeartFocus ? Images.ic_heart_focus : Images.ic_heart
-                      }
+                      source={isHeartFocus ? Images.ic_heart_focus : Images.ic_heart}
                       style={{ width: ScalePortrait(20), aspectRatio: 1 }}
                     />
                   </ButtonAnimation>
@@ -144,60 +137,60 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal: ScalePortrait(12),
+    paddingHorizontal: ScalePortrait(12)
   },
   containerScrollView: {
     alignItems: "center",
-    gap: ScalePortrait(16),
+    gap: ScalePortrait(16)
   },
   scrollView: {
     width: "100%",
     borderRadius: ScalePortrait(12),
-    marginBottom: ScalePortrait(12),
+    marginBottom: ScalePortrait(12)
   },
   imageContainer: {
-    width: "100%",
+    width: "100%"
   },
   image: {
     width: "100%",
     height: ScalePortrait(343),
-    borderRadius: ScalePortrait(12),
+    borderRadius: ScalePortrait(12)
   },
   detailsContainer: {
     height: ScalePortrait(75),
     justifyContent: "space-between",
-    marginTop: ScalePortrait(8),
+    marginTop: ScalePortrait(8)
   },
   title: {
     fontFamily: Fonts.Manrope_SemiBold,
-    fontSize: ScaleFontPortrait(15),
+    fontSize: ScaleFontPortrait(15)
   },
   description: {
     fontFamily: Fonts.Manrope_Regular,
     fontSize: ScaleFontPortrait(13),
-    color: Colors.grey_01,
+    color: Colors.grey_01
   },
   price: {
     fontFamily: Fonts.Manrope_SemiBold,
-    fontSize: ScaleFontPortrait(15),
+    fontSize: ScaleFontPortrait(15)
   },
   containerCategory: {
     width: "100%",
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: ScalePortrait(12),
+    marginBottom: ScalePortrait(12)
   },
   contentCategory: {
     width: ScalePortrait(70),
     gap: ScalePortrait(6),
     alignItems: "center",
     borderRadius: ScalePortrait(4),
-    paddingVertical: ScalePortrait(6),
+    paddingVertical: ScalePortrait(6)
   },
   imageCategory: {
     width: ScalePortrait(40),
-    aspectRatio: 1,
+    aspectRatio: 1
   },
-  titleCategory: { fontFamily: Fonts.Manrope_Medium, color: Colors.white },
+  titleCategory: { fontFamily: Fonts.Manrope_Medium, color: Colors.white }
 });
