@@ -14,13 +14,14 @@ const useLogin = () => {
   };
 
   const onSumitLogin = () => {
-    dispatch(
-      login({
-        username: username.toLowerCase(),
-        password: password.toLowerCase(),
-        callback: () => AppNavigator.navigate(ROUTES.CHAT_BOX_SCREEN.name)
-      })
-    );
+    // dispatch(
+    //   login({
+    //     username: username.toLowerCase(),
+    //     password: password.toLowerCase(),
+    //     callback: () => AppNavigator.navigate(ROUTES.CHAT_BOX_SCREEN.name)
+    //   })
+    // );
+    AppNavigator.navigate(ROUTES.HOME_SCREEN.name);
   };
 
   return {
