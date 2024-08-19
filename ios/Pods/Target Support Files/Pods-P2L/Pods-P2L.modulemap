@@ -1,6 +1,0 @@
-module Pods_P2L {
-  umbrella header "Pods-P2L-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-module Pods_P2L_P2LTests {
-  umbrella header "Pods-P2L-P2LTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

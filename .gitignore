@@ -74,6 +74,7 @@ local.properties
 
 # Node
 node_modules
+ios/Pods
 *.log
 .nvm
 package-lock.json
