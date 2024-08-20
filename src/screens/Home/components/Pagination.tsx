@@ -23,9 +23,12 @@ export default Pagination;
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    backgroundColor: "red",
     height: 40,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    position: "absolute",
+    pointerEvents: "box-none",
+    zIndex: 999,
+    bottom: 0
   }
 });

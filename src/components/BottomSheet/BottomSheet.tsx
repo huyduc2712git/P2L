@@ -17,6 +17,7 @@ type Props = {
   backDropColor: string;
   isShowLine?: boolean;
   style?: StyleProp<ViewStyle>;
+  onClose?: () => void;
 };
 
 export interface BottomSheetMethods {
@@ -31,7 +32,8 @@ const BottomSheet = forwardRef<BottomSheetMethods, Props>((props: Props, ref) =>
     backgroundColor,
     backDropColor,
     isShowLine = true,
-    style
+    style,
+    onClose
   } = props ?? {};
   const inset = useSafeAreaInsets();
   const { height } = Dimensions.get("screen");
@@ -49,6 +51,9 @@ const BottomSheet = forwardRef<BottomSheetMethods, Props>((props: Props, ref) =>
   const close = useCallback(() => {
     "worklet";
     topAnimation.value = withTiming(closeHeight);
+    if (onClose) {
+      onClose();
+    }
   }, [closeHeight, topAnimation]);
 
   useImperativeHandle(

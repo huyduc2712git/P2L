@@ -7,15 +7,17 @@ export interface IDataList {
   title: string;
   description: string;
   price: string;
+  salePrice: string;
 }
 
 const dataList: IDataList[] = [
   {
     id: 1,
-    images: [Images.bg_shoes, Images.bg_shoes, Images.bg_shoes],
+    images: [Images.bg_shoes, Images.bg_login_corgi, Images.ic_heart_focus],
     title: "Louis Vuitton x Nike Air Force 1",
     description:
       "Louis Vuitton x Nike Air Force 1 is the final design of designer Virgil Abloh - Artistic Director of Louis Vuitton's men's fashion brand.",
+    salePrice: "7,999,000 - 8,999,000",
     price: "6,999,000"
   },
   {
@@ -24,6 +26,7 @@ const dataList: IDataList[] = [
     title: "Louis Vuitton x Nike Air Force 1",
     description:
       "Louis Vuitton x Nike Air Force 1 is the final design of designer Virgil Abloh - Artistic Director of Louis Vuitton's men's fashion brand.",
+    salePrice: "7,999,000 - 8,999,000",
     price: "6,999,000"
   },
   {
@@ -32,6 +35,7 @@ const dataList: IDataList[] = [
     title: "Louis Vuitton x Nike Air Force 1",
     description:
       "Louis Vuitton x Nike Air Force 1 is the final design of designer Virgil Abloh - Artistic Director of Louis Vuitton's men's fashion brand.",
+    salePrice: "7,999,000 - 8,999,000",
     price: "6,999,000"
   },
   {
@@ -40,6 +44,7 @@ const dataList: IDataList[] = [
     title: "Louis Vuitton x Nike Air Force 1",
     description:
       "Louis Vuitton x Nike Air Force 1 is the final design of designer Virgil Abloh - Artistic Director of Louis Vuitton's men's fashion brand.",
+    salePrice: "7,999,000 - 8,999,000",
     price: "6,999,000"
   }
 ];

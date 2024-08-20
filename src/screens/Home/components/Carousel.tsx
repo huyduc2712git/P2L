@@ -30,8 +30,8 @@ const Carousel = (props: CarouselProps) => {
   });
 
   return (
-    <View style={{ width: width, height: width }}>
-      <Animated.Image source={item} style={[styles.titleImage, animatedStyle]} />
+    <View key={index} style={{ width: width, height: width }}>
+      <Animated.Image key={index} source={item} style={[styles.titleImage, animatedStyle]} />
     </View>
   );
 };

@@ -4,3 +4,11 @@ export const formatCurrency = (amount: string | number): string => {
 
   return "₫" + new Intl.NumberFormat("vi-VN").format(numericAmount);
 };
+
+export const formatSalePrice = (salePrice: string): string => {
+  const [minPrice, maxPrice] = salePrice
+    .split(" - ")
+    .map((price) => new Intl.NumberFormat("vi-VN").format(Number(price.replace(/,/g, ""))));
+
+  return `₫${minPrice} - ${maxPrice}`;
+};

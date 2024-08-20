@@ -19,7 +19,6 @@ const HomeScreen = (props: HomeScreenProps) => {
   const { isHeartFocus, onFocusHeart, onGoLogin, onPressBack, onShowDetail, bottomSheetRef } =
     useHome();
   const insets = InsetStyleUtil();
-  const { images }: IDataList = dataList?.[0] ?? {};
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -36,7 +35,7 @@ const HomeScreen = (props: HomeScreenProps) => {
             <RenderItem data={item} index={index} onShowDetail={onShowDetail} />
           )}
         />
-        <Detail imageData={images} bottomSheetRef={bottomSheetRef} />
+        <Detail dataList={dataList?.[0]} bottomSheetRef={bottomSheetRef} />
       </View>
     </GestureHandlerRootView>
   );
