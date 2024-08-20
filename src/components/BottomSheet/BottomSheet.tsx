@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet, View } from "react-native";
+import { Dimensions, StyleProp, StyleSheet, View, ViewStyle } from "react-native";
 import React, { forwardRef, useImperativeHandle, useCallback, ReactNode } from "react";
 import Animated, {
   useSharedValue,
@@ -15,6 +15,8 @@ type Props = {
   children?: ReactNode;
   backgroundColor: string;
   backDropColor: string;
+  isShowLine?: boolean;
+  style?: StyleProp<ViewStyle>;
 };
 
 export interface BottomSheetMethods {
@@ -23,7 +25,14 @@ export interface BottomSheetMethods {
 }
 
 const BottomSheet = forwardRef<BottomSheetMethods, Props>((props: Props, ref) => {
-  const { snapTo, children, backgroundColor, backDropColor } = props ?? {};
+  const {
+    snapTo,
+    children,
+    backgroundColor,
+    backDropColor,
+    isShowLine = true,
+    style
+  } = props ?? {};
   const inset = useSafeAreaInsets();
   const { height } = Dimensions.get("screen");
   const percentage = parseFloat(snapTo.replace("%", "")) / 100;
@@ -106,12 +115,15 @@ const BottomSheet = forwardRef<BottomSheetMethods, Props>((props: Props, ref) =>
             {
               backgroundColor: backgroundColor,
               paddingBottom: inset.bottom
-            }
+            },
+            style
           ]}
         >
-          <View style={styles.lineContainer}>
-            <View style={styles.line} />
-          </View>
+          {isShowLine && (
+            <View style={styles.lineContainer}>
+              <View style={styles.line} />
+            </View>
+          )}
           {children}
         </Animated.View>
       </GestureDetector>

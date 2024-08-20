@@ -1,23 +1,24 @@
+import { Images } from "@assets/images";
 import { Fonts } from "@assets/index";
 import Colors from "@constants/Colors";
 import { IDataList } from "@data/dataList";
+import { formatCurrency } from "@utils/formatCurrency";
 import { ScaleFontPortrait, ScalePortrait } from "@utils/ScalePortraitUtil";
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 import FastImage from "react-native-fast-image";
 
 interface RenderItemProps {
   index?: number;
   data?: IDataList;
+  onShowDetail?: () => void;
 }
 
 const RenderItem = (props: RenderItemProps) => {
-  const { data, index } = props ?? {};
-  console.log("data", data?.images[0]);
-
+  const { data, index, onShowDetail } = props ?? {};
   return (
-    <View key={index} style={styles.container}>
-      <FastImage resizeMode="contain" source={{ uri: data?.images[0] }} style={styles.image} />
+    <Pressable onPress={onShowDetail} key={index} style={styles.container}>
+      <FastImage source={data?.images[0]} style={styles.image} />
       <View style={styles.detailsContainer}>
         <Text numberOfLines={1} style={styles.title}>
           {data?.title}
@@ -26,10 +27,10 @@ const RenderItem = (props: RenderItemProps) => {
           {data?.description}
         </Text>
         <Text numberOfLines={1} style={styles.price}>
-          {data?.price}
+          {formatCurrency(data?.price ?? 0)}
         </Text>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
@@ -40,14 +41,15 @@ const styles = StyleSheet.create({
     width: "100%"
   },
   image: {
-    width: "100%",
+    aspectRatio: 1,
+    resizeMode: "contain",
     height: ScalePortrait(343),
     borderRadius: ScalePortrait(12)
   },
   detailsContainer: {
     height: ScalePortrait(75),
     justifyContent: "space-between",
-    marginTop: ScalePortrait(8)
+    marginTop: ScalePortrait(6)
   },
   title: {
     fontFamily: Fonts.Manrope_SemiBold,
@@ -60,6 +62,7 @@ const styles = StyleSheet.create({
   },
   price: {
     fontFamily: Fonts.Manrope_SemiBold,
-    fontSize: ScaleFontPortrait(15)
+    fontSize: ScaleFontPortrait(15),
+    textAlign: "justify"
   }
 });
